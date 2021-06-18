@@ -1,0 +1,39 @@
+---
+en:
+  errors:
+    aggregated_cash_income:
+      blank: "Enter the cash amount you received %{category} in %{month}"
+      invalid_type: Amount must be an amount of money, like 1,000
+      negative: Amount must be more than or equal to zero
+      too_many_decimals: Amount must not include more than 2 decimal numbers
+    aggregated_cash_outgoings:
+      blank: "Enter the cash amount you paid %{category} in %{month}"
+      invalid_type: Amount must be an amount of money, like 1,000
+      negative: Amount must be more than or equal to zero
+      too_many_decimals: Amount must not include more than 2 decimal numbers
+    title_prefix: Error
+    messages:
+      already_confirmed: was already confirmed, please try signing in
+      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
+      expired: has expired, please request a new one
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: '1 error prohibited this %{resource} from being saved:'
+        other: "%{count} errors prohibited this %{resource} from being saved:"
+    show:
+      assessment_already_completed:
+        page_title: You've already completed your financial assessment
+        contact_provider: Speak with your solicitor to check your application status.
+      page_not_found:
+        page_title: Page not found
+        web_address_incorrect: If you typed the web address, check it is correct.
+        web_address_copied: If you pasted the web address, check you copied the entire address.
+      access_denied:
+        page_title: Access denied
+        permission_text: The page is not currently accessible to you
+  problem:
+    index:
+      title: Sorry, there is a problem with the service
+      try_later: Try again later.
+      answers_saved: We saved your answers.

@@ -1,0 +1,8 @@
+---
+en:
+  admin_users:
+    sessions:
+      new:
+        button: Log in
+        heading: 'Admin: Log In'
+        google_login: Log in via google

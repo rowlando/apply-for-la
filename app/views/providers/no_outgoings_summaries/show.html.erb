@@ -1,0 +1,33 @@
+<%= page_template page_title: t('.page_heading'), template: :basic do %>
+
+  <%= form_with(
+        builder: GOVUKDesignSystemFormBuilder::FormBuilder,
+        url: providers_legal_aid_application_no_outgoings_summary_path,
+        model: @form,
+        method: :patch,
+        local: true
+      ) do |form| %>
+
+      <h1 class="govuk-heading-xl"><%= page_title %></h1>
+
+      <p class="gov-body"><%= t('.subheading.text') %></p>
+      <%= list_from_translation_path('.no_outgoings_summaries.show.subheading') %>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <%= form.govuk_collection_radio_buttons(
+              :no_outgoings_summaries,
+              yes_no_options,
+              :value,
+              :label,
+              legend: { text: t('.is_this_correct'), size: 'l', tag: 'h2' }) %>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <%= next_action_buttons_with_form(
+              url: providers_legal_aid_application_no_outgoings_summary_path,
+              show_draft: true
+          ) %>
+
+  <% end %>
+<% end %>

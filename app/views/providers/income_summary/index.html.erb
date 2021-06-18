@@ -1,0 +1,61 @@
+<%= page_template page_title: t('.page_heading'), show_errors_for: @legal_aid_application  do %>
+
+<%
+  errors = @legal_aid_application.errors.messages
+%>
+
+  <p class="gov-body"><%= t('.subheading') %></p>
+
+  <p class="gov-body"><%= t('.you_need_to.text') %></p>
+  <%= list_from_translation_path('.income_summary.index.you_need_to') %>
+
+  <ol class="app-task-list">
+    <% index = 0 %>
+    <% @legal_aid_application.transaction_types.credits.each do |transaction_type| %>
+      <% index += 1 unless transaction_type.child? %>
+      <%= render(
+            'income_type_item',
+            name: transaction_type.name,
+            number: index,
+            display_number: !transaction_type.child?,
+            link_text: t(".select"),
+            bank_transactions: @bank_transactions[transaction_type],
+            error: errors[transaction_type.name.to_sym]
+          ) %>
+    <% end %>
+      <% if @legal_aid_application.transaction_types.credits.count < TransactionType.credits.count %>
+        <%= render partial: 'add_other_income' %>
+      <% end %>
+  </ol>
+
+    <% if  @legal_aid_application.student_finance? || @legal_aid_application.cash_transactions.credits.exists? %>
+
+    <hr>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-l"><%= t('.other_heading') %></h2>
+
+      <p class="gov-body"><%= t('.following_payments') %></p>
+    <% end %>
+
+    <% if @legal_aid_application.student_finance? %>
+      <div>
+       <h3 class="govuk-heading-m govuk-!-padding-top-6"><%= t('.student_finance') %></h3>
+        <p class="gov-body"><%= t('.client_told_us') %> <%= gds_number_to_currency(@legal_aid_application.value_of_student_finance) %><%= t('.academic_year') %></p>
+      </div>
+    <% end %>
+
+  <% if @legal_aid_application.cash_transactions.credits.exists? %>
+
+    <%= render partial: 'shared/cash_transactions' %>
+
+  <% end %>
+
+  <div class="govuk-!-padding-bottom-6"></div>
+
+  <%= next_action_buttons_with_form(
+        url: providers_legal_aid_application_income_summary_index_path,
+        show_draft: true
+      ) %>
+<% end %>

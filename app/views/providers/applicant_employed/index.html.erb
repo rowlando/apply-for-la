@@ -1,0 +1,27 @@
+<%= form_with(
+        model: @form,
+        url: providers_legal_aid_application_applicant_employed_index_path(@legal_aid_application),
+        method: :post,
+        local: true
+    ) do |form| %>
+
+  <%= page_template(
+        page_title: t('.heading_1'),
+        template: :basic,
+        form: form,
+        back_link: { text: t('generic.back') }
+      ) do %>
+
+    <%= form.govuk_collection_radio_buttons(
+          :employed,
+          yes_no_options,
+          :value,
+          :label,
+          hint: {text: t('.hint')},
+          legend: {text: content_for(:page_title), size: 'xl', tag: 'h1'}
+        ) %>
+
+    <%= next_action_buttons(show_draft: true, form: form) %>
+  <% end %>
+
+<% end %>

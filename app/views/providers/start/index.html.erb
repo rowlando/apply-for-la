@@ -1,0 +1,42 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl"><%= t('.apply_for_legal_aid_heading') %></h1>
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body"><%= t('.must_be_provider') %></p>
+    </div>
+
+    <p class="govuk-body"><%= t('.domestic_violence_or_abuse_only') %></p>
+
+    <p class="govuk-body"><%= t('.use_ccms_para_html') %></p>
+
+    <h2 class="govuk-heading-m"><%= t('.use_ccms_list.heading') %></h2>
+
+    <p class="govuk-body"><%= t('.use_ccms_list.title') %></p>
+
+    <%= list_from_translation_path '.start.index.use_ccms_list' %>
+
+    <%= link_to_accessible start_button_label(:start_now),
+                providers_legal_aid_applications_path,
+                role: 'button',
+                class: 'govuk-button govuk-button--start',
+                id: 'start' %>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+  <div class="govuk-header__container govuk-width-container"></div>
+
+  <div class="govuk-!-padding-bottom-4"></div>
+
+  <h3 class="govuk-heading-m"><%= t('.related_content_list.title') %></h3>
+  <ul class="govuk-list">
+    <li>
+      <%= link_to_accessible t('.related_content_list.item_1'), 'https://www.gov.uk/legal-aid', class: 'govuk-link govuk-body govuk-!-font-size-16' %>
+    </li>
+    <li>
+      <%= link_to_accessible t('.related_content_list.item_2'), 'https://www.gov.uk/check-legal-aid', class: 'govuk-link govuk-body govuk-!-font-size-16' %>
+    </li>
+  </ul>
+  </div>
+</div>

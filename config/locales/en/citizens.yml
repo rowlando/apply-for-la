@@ -1,0 +1,224 @@
+---
+en:
+  citizens:
+    gather_transactions:
+      index:
+        retrieving_transactions: Retrieving bank transactions
+        failed_transactions_retrieval: Failed to retrieve bank transactions
+        default_error: Sorry, we are experiencing technical difficulties. Please try again later.
+        page_loading: Page Loading
+        heading_1: "You've successfully shared your bank transactions"
+        intro_text: We’ve downloaded your bank statements from the past 3 months.
+        balance_text: We’ll ask your solicitor to put your transactions into categories to help us understand your financial situation.
+      display_error:
+        bank_selection_link: Try again
+    accounts:
+      index:
+        account_holder_address_heading: Account holder address
+        account_holder_name_heading: Account holder name
+        account_number_heading: Account Number
+        balance_heading: Balance
+        sort_code_heading: Sort Code
+        type_heading: Type
+        your_accounts: Your bank accounts
+        link_other_account: Add another bank account
+    additional_accounts:
+      index:
+        header: Do you have accounts with other banks?
+        hint: Share details of any accounts you have with another bank or building society.
+        error: Select yes if you have accounts with other banks
+      new:
+        hint: Do not include savings accounts.
+        field_set_header: Do you have current accounts you cannot access online?
+    banks:
+      index:
+        title: Select your bank
+        what_happens_next: What happens next
+        connect: "You’ll be redirected to your bank’s website or app where you can:"
+        bullet_1: sign in to your online banking
+        bullet_2_html: give TrueLayer permission to collect 3 months of bank statements on behalf of the <abbr title='Legal Aid Agency'>LAA</abbr>
+        every_account: You'll need to do this for every personal and joint account you can access online, including those with no money in them.
+        hint: Select one bank at a time. You'll be able to select more later if you have accounts with different banks.
+      create:
+        error: Select a bank
+    cash_incomes:
+      checkbox:
+        info: Cash means physical money like banknotes and coins.
+        none_selected: None of the above
+      show:
+        page_heading: Select payments you receive in cash
+      cash_income_form:
+        dates: "%{date}"
+        info: Cash means physical money like banknotes and coins.
+        none_selected: None of the above
+      update:
+        none_selected: Select if you receive these payments in cash
+    cash_outgoings:
+      checkbox:
+        info: Cash means physical money like banknotes and coins.
+        none_selected: None of the above
+      show:
+        page_heading: Select payments you make in cash
+      cash_outgoings_form:
+        dates: "%{date}"
+        info: Cash means physical money like banknotes and coins.
+        none_selected: None of the above
+      update:
+        none_selected: Select if you receive these payments in cash
+
+    check_answers:
+      cash_transactions:
+        cash_transactions_credits_header: Payments you receive in cash
+        cash_transactions_debits_header: Payments you make in cash
+        none: None
+      index:
+        assets:
+          heading: Property, savings and other assets
+          other_assets: Other assets
+          outstanding_mortgage: Outstanding mortgage amount
+          own_home: Property owned
+          percentage_home: Percentage owned
+          property_value: Property value
+          restrictions: Are there any legal restrictions that prevent you from selling or borrowing against your assets?
+          savings_and_investments: Savings and investments
+          shared_ownership: Owned with anyone else
+        h1-heading: Check your answers and submit information
+        bank_accounts:
+          heading: Your bank accounts
+          account: Account
+          bank: Bank
+          account_number: Account number
+          sort_code: Sort code
+          balance: Balance
+        link_other_account: Add another bank account
+        payments_receive_heading: Payments you receive
+        payments_make_heading: Payments you make
+        submit_button: Agree and submit
+        income_outgoings: Your income and outgoings
+      student_finance:
+        student_finance: Student finance
+        do_you_get: Do you get student finance?
+        how_much: How much student finance will you get this academic year?
+    contact_providers:
+      show:
+        title: Contact your solicitor to continue your application
+        they_will_check: They will check whether you qualify for legal aid by asking about your finances.
+    consents:
+      show:
+        title_html: Do you agree to share 3 months of bank statements with the <abbr title='Legal Aid Agency'>LAA</abbr> via TrueLayer?
+        inset_text: We only use your bank statements to support your legal aid application. We do not use them for anything else
+        summary_heading: What will TrueLayer be able to see?
+        able_to_see:
+          heading: "TrueLayer will have one-off, read-only access to your:"
+          list: |
+            account details like your account number and sort code
+            bank statements and transaction details
+            account balances
+            Direct Debits and standing orders
+        unable_to_see:
+          heading: "They will not:"
+          list: |
+            store your bank account details
+            see your online banking sign-in details
+            share your details with anyone other than the LAA
+            have any ongoing access to your bank account details
+    declarations:
+      show:
+        page_heading: Declaration
+        submit_button: Agree and submit
+    dependants:
+      assets_values:
+        show:
+          page_heading: "Does %{name} have assets worth more than £8,000?"
+      relationships:
+        show:
+          page_heading: "What is your relationship to %{name}?"
+    has_dependants:
+      show:
+        page_heading: Do you have any dependants?
+        info: A dependant could be a child or adult who lives with you and depends on you for financial support.
+        extra_info: Do not include your partner if you have one.
+    has_offline_accounts:
+      new:
+        error: Select yes if you have current accounts you cannot access online
+    has_other_dependants:
+      show:
+        heading: Do you have any other dependants?
+        error: Select yes if you have other dependants
+    identify_types_of_incomes:
+      show:
+        page_heading: Which of the following payments do you receive?
+      update:
+        none_selected: Select if you receive any types of income
+    identify_types_of_outgoings:
+      show:
+        page_heading: Which of the following payments do you make?
+      update:
+        none_selected: Select if you make any regular payments
+    legal_aid_applications:
+      index:
+        case_reference: 'Case reference:'
+        heading_1: Your legal aid application
+        how_we_do_this_heading: How we do this
+        how_we_do_this_body_1: We check 3 months of your bank statements to see the kinds of payments you make and receive.
+        how_we_do_this_body_2: This helps us work out if you can get legal aid or you need to pay towards the costs.
+        how_we_do_this_body_3: With your permission, we securely collect your bank statements online using a trusted third-party financial service provider called TrueLayer.
+        how_we_do_this_body_4: You’ll also need to answer questions about the types of payments you make and receive.
+        name: 'Name:'
+        online_banking_details: Your sign-in details for every bank account you use online banking for.
+        what_you_will_need: What you'll need
+        we_need_to_check: We need to check if you qualify financially for legal aid.
+        your_solicitor: 'Your solicitor:'
+    means_test_results:
+      show:
+        page-heading: What happens next
+        completed_financial_assessment: You've shared your financial information
+        name: Name
+        reference_number: Reference number
+        solicitors-actions: Your solicitor will use the information you provided to help them complete your application.
+        what-happens-next:  We'll confirm if you qualify for legal aid once we've checked your financial situation and the details of your case.
+        feedback_prefix: 'Give feedback'
+        feedback_suffix: ' to help us improve this service.'
+    other_assets:
+      show:
+        h1-heading: Which types of assets do you have?
+        none_selected: None of these
+    resend_link_requests:
+      show:
+        page_title: This link has expired
+        new_link_request: Request a new link
+      update:
+        page_title: We've sent you a new link
+        check_inbox: Check your email inbox.
+        valid_until: Your new link will only remain active for 7 days for security reasons.
+    restrictions:
+      show:
+        h1-heading: Are there any legal restrictions that prevent you from selling or borrowing against your assets?
+        restrictions_details: Tell us which assets you cannot sell or borrow against, and why
+        for_example: "For example:"
+        examples:
+          list: |
+            you're bankrupt
+            your home has been repossessed
+            your assets are the subject of dispute in other legal proceedings
+    savings_and_investments:
+      accounts_summary:
+        col_account_number: Account number
+        col_amount: Amount
+        col_sort_code: Sort code
+        col_type: Type
+        intro_text: 'You have already told us you have the following online accounts:'
+      show:
+        h1-heading: What types of savings or investments do you have?
+        none_selected: None of these
+    shared_ownerships:
+      show:
+        heading_1: Do you own your home with anyone else?
+    student_finances:
+      show:
+        field_set_header: Do you get student finance?
+        hint: This includes any type of student loan, grant or bursary.
+      annual_amounts:
+        show:
+          field_set_header: How much student finance will you get this academic year?
+          hint: Check your student finance entitlement letter.

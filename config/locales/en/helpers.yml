@@ -1,0 +1,56 @@
+---
+en:
+  true_false: &true_false
+    'false': 'No'
+    'true': 'Yes'
+  helpers:
+    accessibility:
+      error: "Error:"
+    hint:
+      address_lookup:
+        postcode: This must be a valid UK postcode.
+      applicant:
+        national_insurance_number: For example, 'QQ 12 34 56 C'.
+      student_finance: This includes any type of student loan, grant or bursary.
+    label:
+      applicant:
+        employed:
+          <<: *true_false
+      feedback:
+        done_all_needed:
+          <<: *true_false
+        improvement_suggestion: Do you have any other feedback or suggestions on how we could improve the service?
+      merits_assessment:
+        application_purpose: Please give details of why your client is applying for legal aid
+        success_prospect_details: Tell us why legal aid should be granted
+        success_likely:
+          <<: *true_false
+      legal_aid_application:
+        own_vehicle:
+          <<: *true_false
+      application_merits_task/opponent: &opponent
+        understands_terms_of_court_order_details: Tell us why you think the court would enforce a breach of an order
+        warning_letter_sent_details: Tell us why a warning letter has not been sent
+        bail_conditions_set_details: Give details of the bail conditions, including the date they're likely to end
+        police_notified_details: Tell us what action they've taken (if any), including dates and the outcome
+        understands_terms_of_court_order:
+          <<: *true_false
+        warning_letter_sent:
+          <<: *true_false
+        police_notified:
+          <<: *true_false
+        bail_conditions_set:
+          <<: *true_false
+      application_merits_task_opponent:
+        <<: *opponent
+      setting:
+        mock_true_layer_data:
+          <<: *true_false
+        manually_review_all_cases:
+          <<: *true_false
+        allow_welsh_translation:
+          <<: *true_false
+        allow_multiple_proceedings:
+          <<: *true_false
+        override_dwp_results:
+          <<: *true_false

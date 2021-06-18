@@ -1,0 +1,38 @@
+<%= page_template(page_title: t('.title')) do %>
+  <p class="govuk-body"><%= t '.sign_in_para' %></p>
+
+  <p class="govuk-body">
+    <%= list_from_translation_path '.about_the_financial_assessments.show.list' %>
+  </p>
+
+  <p class="govuk-body">
+    <%= t('.activity') %>
+  </p>
+
+  <h2 class="govuk-heading-m">
+    <%= t '.section_2.heading' %>
+  </h2>
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__value">
+        <%= @applicant.email %>
+      </dt>
+      <dd class="govuk-summary-list__actions">
+        <%= link_to_accessible(
+                t('generic.change'),
+                providers_legal_aid_application_email_address_path(anchor: :email),
+                class: 'govuk-link change-link',
+                suffix: 'email address'
+            ) %>
+      </dd>
+    </div>
+  </dl>
+
+  <%= next_action_buttons_with_form(
+        url: providers_legal_aid_application_about_the_financial_assessment_path,
+        method: :patch,
+        show_draft: true,
+        continue_button_text: t('.send_client_link')
+      ) %>
+<% end %>

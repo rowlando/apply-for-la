@@ -1,0 +1,15 @@
+---
+# Note: this page is loaded via the pagy initializer, so restart server to see changes
+en:
+  pagy:
+    info:
+      multiple_pages: "Showing %{from} - %{to} of %{count} %{item_name}"
+      no_items: "No %{item_name}"
+      single_page: "Showing %{count} of %{count} %{item_name}"
+    item_name:
+      one: "result"
+      other: "results"
+    nav:
+      gap: "&hellip;"
+      next: "Next"
+      prev: "Previous"

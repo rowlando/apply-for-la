@@ -1,0 +1,17 @@
+---
+en:
+  forms:
+    address:
+      errors:
+        no_results: We could not find any addresses for that postcode. Enter the address manually.
+        unsuccessful: We could not find any addresses for that postcode. Enter the address manually.
+    address_lookup:
+      address_manual_link: Enter address manually
+      heading: Enter your client's correspondence address
+      label_1: postcode
+      postcode: Postcode
+      submit_button: Find address
+    address_manual:
+      heading: Enter your client's correspondence address
+    address_selection:
+      heading: Enter your client's correspondence address

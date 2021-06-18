@@ -1,0 +1,38 @@
+<div class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
+    <h2 class="govuk-heading-m">
+      <%= t('.client_eligibility_calculation') %>
+    </h2>
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-breakdown">
+
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-income-calculation">
+          <%= t('.income_calculation') %>
+        </span>
+        </h2>
+      </div>
+        <%= render 'income' %>
+        <%= render 'outgoings' %>
+        <%= render 'deductions' %>
+        <%= render 'disposable_income' %>
+    </div>
+
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-capital-calculation">
+          <%= t('.capital_calculation') %>
+        </span>
+        </h2>
+      </div>
+        <%= render 'shared/property_results' %>
+        <%= render 'shared/vehicle_results' %>
+        <%= render 'shared/savings_and_investments' %>
+        <%= render 'shared/other_assets' %>
+        <%= render 'shared/total_capital' %>
+        <%= render 'shared/restrictions' %>
+    </div>
+  </div>
+</div>

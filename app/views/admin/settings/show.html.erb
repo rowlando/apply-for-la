@@ -1,0 +1,61 @@
+<%= page_template page_title: t('.heading_1'), back_link: :none do %>
+  <%= form_with(
+        model: @form,
+        url: admin_settings_path,
+        method: :patch,
+        local: true
+      ) do |form| %>
+
+    <%= form.govuk_collection_radio_buttons(
+          :mock_true_layer_data,
+          yes_no_options,
+          :value,
+          :label,
+          inline: true,
+          hint: { text: t('.hints.mock_true_layer_data', bank_transaction_filename: Setting.bank_transaction_filename)},
+          legend: { text: t('.labels.mock_true_layer_data') }
+        ) %>
+
+    <%= form.govuk_collection_radio_buttons(
+      :manually_review_all_cases,
+      yes_no_options,
+      :value,
+      :label,
+      inline: true,
+      hint: { text: t('.hints.manually_review_all_cases')},
+      legend: { text: t('.labels.manually_review_all_cases') }
+    ) %>
+
+    <%= form.govuk_collection_radio_buttons(
+      :allow_welsh_translation,
+      yes_no_options,
+      :value,
+      :label,
+      inline: true,
+      hint: { text: t('.hints.allow_welsh_translation')},
+      legend: { text: t('.labels.allow_welsh_translation') }
+    ) %>
+
+    <%= form.govuk_collection_radio_buttons(
+        :allow_multiple_proceedings,
+        yes_no_options,
+        :value,
+        :label,
+        inline: true,
+        hint: { text: t('.hints.allow_multiple_proceedings')},
+        legend: { text: t('.labels.allow_multiple_proceedings') }
+    ) %>
+
+    <%= form.govuk_collection_radio_buttons(
+        :override_dwp_results,
+        yes_no_options,
+        :value,
+        :label,
+        inline: true,
+        hint: { text: t('.hints.override_dwp_results')},
+        legend: { text: t('.labels.override_dwp_results') }
+    ) %>
+
+    <%= form.submit(t('generic.submit'), class: 'govuk-button form-button') %>
+  <% end %>
+<% end %>

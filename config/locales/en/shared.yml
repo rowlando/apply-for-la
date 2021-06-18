@@ -1,0 +1,502 @@
+---
+en:
+  shared:
+    partials:
+      revealing_checkbox:
+        dates:  "%{date_start} to %{date_end}"
+        citizens:
+          cash_incomes:
+            hint: Enter the total cash amount you received in each month, or enter 0 if you received none.
+            check_box_benefits: Benefits
+            check_box_friends_or_family: Financial help from friends or family
+            check_box_maintenance_in: Maintenance payments from a former partner
+            check_box_property_or_lodger: Income from a property or lodger
+            check_box_pension: Pension
+          cash_outgoings:
+            hint: Enter the total cash amount you paid in each month, or enter 0 if you paid none.
+            check_box_rent_or_mortgage: Housing payments
+            check_box_child_care: Childcare payments
+            check_box_maintenance_out: Maintenance payments to a former partner
+            check_box_legal_aid: Payments towards legal aid in a criminal case
+    applicant_declaration:
+      confirm_following: Confirm the following
+      submission_list_summary: You agree that
+      submission_list: |
+        you've instructed %{firm} to represent you
+        we can share your information with other government departments like the Department for Work and Pensions and HM Revenue and Customs
+        we can check your details with your bank and credit reference agencies
+        you may have to pay towards your legal aid
+        you may have to repay the legal costs if you keep or gain property or money at the end of your case (known as the 'statutory charge')
+        the information you've given is complete and correct
+        you'll report any changes to your financial situation immediately
+      warning_list_summary: If you give wrong or incomplete information, do not report changes, or are found to have committed benefit fraud, you may
+      warning_list: |
+        be prosecuted
+        need to pay a financial penalty
+        have your legal aid stopped and have to pay back the costs
+    application_ref:
+      apply_ref: 'Apply service case reference:'
+      ccms_ref_html: "<abbr title='Client and Cost Management System'>CCMS</abbr> case reference:"
+    assessment_results:
+      eligible:
+        heading: "%{name} could be eligible for legal aid"
+        details:
+          - Based on their financial situation, your client may not have to pay towards legal aid.
+          - You still need to provide details of the case before we can decide if they’re eligible.
+      not_eligible:
+        heading: "%{name} is unlikely to get legal aid"
+        detail: This is because they have too much disposable capital.
+      capital_contribution_required:
+        heading: "%{name} may need to pay towards legal aid"
+        details:
+          - "We’ve calculated that your client should pay %{amount} from their disposable capital."
+          - "You still need to provide details of the case before we can decide if they’re eligible."
+      manual_check_required:
+        heading: We need to check if %{name} should pay towards legal aid
+        details:
+          - You told us legal restrictions prevent your client from selling or borrowing against their assets.
+          - We calculated that your client should pay a contribution, but the amount depends on the restrictions.
+          - We’ll check the details you provided and let you know our decision.
+
+      manual_check_disregards:
+        heading: "We need to check if %{name} can get legal aid"
+        details:
+          - We calculated that your client should pay a contribution towards legal aid.
+          - The amount depends on whether or not the scheme or charity payments they've received are disregarded from the finanical eligibility calculation.
+          - A caseworker will review this and let you know the outcome.
+          - Please continue with the application to provide details of the case.
+
+      manual_check_disregards_restrictions:
+        heading: "We need to check if %{name} can get legal aid"
+        line1: "We calculated that your client should pay a contribution towards legal aid but the amount depends on:"
+        bullets:
+          - whether or not the scheme or charity payments they've received are disregarded from the finanical eligibility calculation.
+          - the legal restrictions preventing them from selling or borrowing against their assets
+        line2: We'll check the details you provided and let you know the outcome.
+        line3: Please continue with the application to provide details of the case.
+
+      capital_and_income_contribution_required:
+        heading: "%{name} may need to pay towards legal aid"
+        line_1: "We've calculated that your client should pay:"
+        line_2: You still need to provide details of the case before we can decide if they’re eligible.
+        details:
+          - "%{income_contribution} from their disposable income"
+          - "%{capital_contribution} from their disposable capital"
+      income_contribution_required:
+        heading: "%{name} may need to pay towards legal aid"
+        details:
+          - "We’ve calculated that your client should pay %{amount} from their disposable income."
+          - "You still need to provide details of the case before we can decide if they’re eligible."
+    means_report:
+      item:
+        deductions:
+          dependants_allowance: Dependants allowance
+          disregarded_state_benefits: Income from benefits excluded from calculation
+        income:
+          benefits: Benefits
+          family_help: Financial help from friends or family
+          maintenance_in: Maintenance payments
+          property_or_lodger: Income from property or lodger
+          student_loan: Student loan or grant
+          pension: Pension
+        outgoing:
+          housing: Housing payments
+          childcare: Childcare payments
+          maintenance_out: Maintenance payments to a former partner
+          legal_aid: Payments towards legal aid in a criminal case
+      total:
+        total_income: Total income
+        total_outgoings: Total outgoings
+        total_deductions: Total deductions
+    cash_transactions:
+      amount: Amount
+      cash_heading: 'Physical cash:'
+      cash_hint: For example, banknotes and coins.
+      dates: "%{date_start}"
+      month: Month
+      benefits: Benefits
+      child_care: Childcare payments
+      excluded_benefits: Disregarded benefits
+      friends_or_family: Financial help from friends or family
+      legal_aid: Payments towards legal aid in a criminal case
+      maintenance_in: Maintenance payments from a former partner
+      maintenance_out: Maintenance payments to a former partner
+      pension: Pension
+      property_or_lodger: Income from a property or lodger
+      rent_or_mortgage: Housing payments
+      total: Total
+    check_answers:
+      assets:
+        assets:
+          has_offline_savings_account: Does your client have any savings accounts they cannot access online?
+          property-heading: Property
+          offline_accounts: Your client's bank accounts
+          offline_savings: Savings accounts your client cannot access online
+          other_assets: Which types of assets does your client have?
+          policy_disregards: Payments from scheme or charities
+          restrictions: Do any restrictions apply?
+          savings_and_investments: Which types of savings or investments does your client have?
+          savings_account: Savings account
+          current_account: Current account
+          bank_accounts: Which bank accounts does your client have?
+        property:
+          outstanding_mortgage: What is the outstanding mortgage on your client's home?
+          own_home: Does your client own the home they live in?
+          percentage_home: What % share of their home does your client legally own?
+          property_value: How much is your client's home worth?
+          shared_ownership: Does your client own their home with anyone else?
+        submit:
+          heading: Submit your details
+          text: By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+      bank_transaction_table:
+        total: '%{text} total'
+      capital_result:
+        contribution: Capital contribution
+        lower_limit_label: Capital lower limit
+        upper_limit_label: Capital upper limit
+        total: Total capital assessed
+      client_details:
+        address: Correspondence address
+        age: "%{years} years old"
+        age_question: Age at computation date
+        dob: Date of birth
+        email: Email address
+        first_name: First name
+        last_name: Last name
+        nino: National Insurance number
+      emergency_costs:
+        request_higher_limit: Do you want to request a higher cost limit?
+        new_cost_limit: New emergency cost limit
+        new_limit_reasons: Why you need a higher cost limit
+      income_details:
+        income:
+          benefits: Benefits
+          family_help: Financial help from friends or family
+          maintenance_in: Maintenance payments
+          property_or_lodger: Income from property or lodger
+          student_loan: Student loan or grant
+          pension: Pension
+          total_income: Total income
+      income_result:
+        total_disposable_income: Total disposable income assessed
+        total_gross_income: Total gross income assessed
+        gross_income_limit: Gross income limit
+        disposable_income_lower_limit: Disposable income lower limit
+        disposable_income_upper_limit: Disposable income upper limit
+        disposable_income_contribution: Income contribution
+      merits: &merits
+        complete-application-heading: Complete the application
+        complete-application-text: By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        case-details-heading: Case details
+        involved-children-heading: Children involved in this application
+        opponent-heading: Opponent details
+        latest-incident-heading: Latest incident details
+        statement-of-case-heading: Statement of case
+        gateway-evidence-heading: Supporting evidence
+        items:
+          client_declaration: Client declaration
+          client_declaration_answer: Read & agreed
+          proceedings_currently_before_court: Proceedings currently before court
+          prospects_of_success: Is the chance of a successful outcome 50% or better?
+          success_prospect: What is the chance of a successful outcome?
+          statement_of_case: Provide a statement of case
+          full_name: Name
+          child: Child
+          linked_children: Which children are covered under this proceeding?
+          attempts_to_settle: What attempts have been made to settle the matter?
+          understands_terms_of_court_order: Does the opponent have the mental capacity to understand the terms of a court order?
+          warning_letter_sent: Has a warning letter been sent to the opponent?
+          police_notified: Have the police been notified?
+          bail_conditions_set: Have bail conditions been set?
+          notification_of_latest_incident: When did your client contact you about the latest domestic abuse incident?
+          date_of_latest_incident: When did the incident occur?
+          details_of_latest_incident: What happened during the incident?
+          gateway_evidence: Upload supporting evidence
+      merits_orig: # TODO: Delete when Multi-proceeding flag is removed
+        <<: *merits
+      no_link_cash_transaction_item:
+        no_transactions: "No"
+        html:
+          no_transactions: "No"
+      proceedings_details:
+        proceeding: Proceeding
+        section_proceeding:
+          heading: Scope of legal aid
+          client_involvement_type: Client involvement type
+          client_involvement_type_applicant: Applicant
+          proceeding: What does your client want legal aid for?
+        section_laspo:
+          heading: LASPO
+          question: Are the Section 8 proceedings you're applying for in scope of LASPO?
+      delegated_functions:
+        not_used: Not used
+        section_delegated:
+          heading: Delegated functions
+          used_delegated_functions: Have you used delegated functions?
+          used_delegated_functions_on: Date you used delegated functions
+      emergency_limitations:
+        form_of_service: &form Form of service
+        costs: &costs Costs you can incur
+        work: &work Work you can do
+      substantive_limitations:
+        form_of_service: *form
+        costs: *costs
+        work: *work
+      restrictions:
+        citizens:
+          heading: Restrictions on your assets
+          question: Are there any legal restrictions that prevent you from selling or borrowing against your assets?
+          details: Details of restrictions
+        providers:
+          heading: Restrictions on your client's assets
+          question: Is your client prohibited from selling or borrowing against their assets? 
+      vehicles:
+        providers:
+          heading: Vehicles
+          own: Does your client own a vehicle?
+          estimated_value: What is the estimated value of the vehicle?
+          payment_remaining: Are there any payments left on the vehicle?
+          more_than_three_years_old: The vehicle was bought more than three years ago?
+          used_regularly: Is the vehicle in regular use?
+    forms:
+      applicant_form:
+        page_title: Enter your client's details
+        full_name: Full name
+        email_label: Email address
+        nino_label: National Insurance number
+      date_input_fields:
+        date_of_birth_hint: For example, 31 3 1980.
+        date_of_birth_label: Date of birth
+        occurred_on_label: When did the incident occur?
+        told_on_label: When did your client contact you about the latest domestic abuse incident?
+        told_on_hint: For example 31 3 2019.
+        purchased_on_hint: For example, 31 3 1980.
+        used_delegated_functions_on_label: Date you used delegated functions
+        used_delegated_functions_on_hint: "For example, %{options}."
+      dependants:
+        assets_value:
+          example: For example, property, cash savings or shares.
+          enter_assets_value: Enter the total asset value
+        details:
+          add_dependant_later: You can add more dependants later.
+          you_already_told_about: "You've already told us about:"
+          dependant_list_item: "%{name}, born %{date_of_birth}"
+        relationship:
+          option:
+            child_relative: They're a child relative
+            adult_relative: They're an adult relative
+            hint:
+              child_relative: For example, your child, grandchild, niece or nephew.
+              adult_relative: For example, a parent, grandparent, aunt or uncle.
+        monthly_incomes:
+          hint: For example, money from a job, apprenticeship, or student loan or grant.
+          enter_monthly_income: Enter the amount they get each month
+      savings_and_investments_form:
+        none_selected: None of these
+      outstanding_mortgage_form:
+        citizens:
+          outstanding_mortgages:
+            field_set_header: What is the outstanding mortgage on your home?
+        providers:
+          outstanding_mortgages:
+            field_set_header: What is the outstanding mortgage on your client's home?
+      own_home_form:
+        mortgage: Yes, with a mortgage or loan
+        'no': 'No'
+        owned_outright: Yes, owned outright
+      percentage_home_form:
+        citizens:
+          percentage_homes:
+            hint:
+              percentage_home: Your name must be on the property deeds, lease, freehold or mortgage.
+            percentage_home: Enter the estimated percentage share you own
+        providers:
+          percentage_homes:
+            percentage_home: Your client's name must be on the property deeds, lease, freehold or mortgage
+      policy_disregards:
+        form:
+          providers:
+            policy_disregards:
+              england_infected_blood_support: England Infected Blood Support Scheme
+              vaccine_damage_payments: Vaccine Damage Payments Scheme
+              variant_creutzfeldt_jakob_disease: Variant Creutzfeldt-Jakob disease (vCJD) Trust
+              criminal_injuries_compensation_scheme: Criminal Injuries Compensation Scheme
+              national_emergencies_trust: National Emergencies Trust (NET)
+              we_love_manchester_emergency_fund: We Love Manchester Emergency Fund
+              london_emergencies_trust: The London Emergencies Trust
+      received_benefit_confirmation:
+        form:
+          providers:
+            received_benefit_confirmations:
+              universal_credit: Universal Credit
+              guarantee_credit_element_of_pension_credit: Guarantee Credit element of Pension Credit
+              income_based_job_seekers_allowance: Income-based Jobseeker’s Allowance (JSA)
+              income_related_employment_and_support_allowance: Income-related Employment and Support Allowance (ESA)
+              income_support: Income Support
+      revealing_checkbox:
+        attribute:
+          citizens:
+            other_assets:
+              check_box_valuable_items_value: Any valuable items worth £500 or more
+              check_box_land_value: Land
+              check_box_inherited_assets_value: Money or assets from the estate of a person who has died
+              check_box_money_owed_value: Money owed to you, including from a private mortgage
+              check_box_second_home_mortgage: Second property or holiday home outstanding mortgage amount
+              check_box_second_home_percentage: Second property or holiday home percentage owned
+              check_box_second_home_value: Second property or holiday home estimated value
+              check_box_timeshare_property_value: Timeshare property
+              check_box_trust_value: Interest in a trust
+              valuable_items_value: Enter estimated total value, minus any sale costs
+              land_value: Enter estimated value
+              inherited_assets_value: Enter estimated total value
+              money_owed_value: Enter estimated amount owed
+              timeshare_property_value: Enter value, minus any loan and sale costs
+              trust_value: Enter estimated total value
+              hint:
+                check_box_valuable_items_value: For example, jewellery, art or antiques – do not include wedding or engagement rings, furniture, clothing or tools used for work
+            savings_and_investments:
+              cash: Enter the total amount
+              check_box_cash: Money not in a bank account
+              check_box_life_assurance_endowment_policy: Life assurance and endowment policies not linked to a mortgage
+              check_box_national_savings: National Savings Certificates and Premium Bonds
+              check_box_other_person_account: Access to another person's bank account
+              check_box_peps_unit_trusts_capital_bonds_gov_stocks: PEPs, unit trusts, capital bonds and government stocks
+              check_box_plc_shares: Shares in a PLC (public limited company)
+              hint:
+                revealing_check_box_offline_current_accounts: If you have multiple accounts, take the lowest balance from each account last month, add them, then enter the total
+                check_box_cash: For example, cash kept at home
+                check_box_life_assurance_endowment_policy: Do not include policies that only pay out on death
+                check_box_other_person_account: For example, you are a signatory on a child's account
+              life_assurance_endowment_policy: Enter the total value of all you own
+              national_savings: Enter the total value of all you own
+              other_person_account: Enter the estimated total in all accounts
+              peps_unit_trusts_capital_bonds_gov_stocks: Enter the total value of all you own
+              plc_shares: Enter the total value of all you own
+          providers:
+            other_assets:
+              check_box_valuable_items_value: Any valuable items worth £500 or more
+              check_box_land_value: Land
+              check_box_inherited_assets_value: Money or assets from the estate of a person who has died
+              check_box_money_owed_value: Money owed to them, including from a private mortgage
+              check_box_second_home_mortgage: Second property or holiday home outstanding mortgage amount
+              check_box_second_home_percentage: Second property or holiday home percentage owned
+              check_box_second_home_value: Second property or holiday home estimated value
+              check_box_timeshare_property_value: Timeshare property
+              check_box_trust_value: Interest in a trust
+              valuable_items_value: Enter the estimated value
+              land_value: Enter estimated value
+              inherited_assets_value: Enter estimated total value
+              money_owed_value: Enter estimated amount owed
+              timeshare_property_value: Enter value, minus any loan and sale costs
+              trust_value: Enter estimated total value
+              hint:
+                check_box_valuable_items_value: For example, jewellery, art or antiques – do not include wedding or engagement rings, furniture, clothing or tools used for work.
+            offline_accounts:
+              check_box_offline_current_accounts: Current account
+              check_box_offline_savings_accounts: Savings account
+              hint:
+                revealing_check_box_offline_current_accounts: Include accounts with a negative balance or no money in them.
+                revealing_check_box_offline_savings_accounts: Include accounts with a negative balance or no money in them.
+              offline_current_accounts: Enter the total in all current accounts
+              offline_savings_accounts: Enter the total in all savings accounts
+            savings_and_investments:
+              cash: Enter the total amount
+              check_box_cash: Money not in a bank account
+              check_box_offline_current_accounts: Current account
+              check_box_offline_savings_accounts: Savings account
+              check_box_life_assurance_endowment_policy: Life assurance and endowment policies not linked to a mortgage
+              check_box_national_savings: ISAs, National Savings Certificates and Premium Bonds
+              check_box_other_person_account: Access to another person's bank account
+              check_box_peps_unit_trusts_capital_bonds_gov_stocks: PEPs, unit trusts, capital bonds and government stocks
+              check_box_plc_shares: Shares in a PLC (public limited company)
+              hint:
+                revealing_check_box_offline_current_accounts: If your client has multiple accounts, take the lowest balance from each account last month, add them, then enter the total
+                check_box_cash: For example, cash kept at home.
+                check_box_life_assurance_endowment_policy: Do not include policies that only pay out on death.
+                check_box_other_person_account: For example, your client is a signatory on a child's account.
+              offline_current_accounts: Enter the lowest balance last month
+              offline_savings_accounts: Enter the total in all accounts
+              life_assurance_endowment_policy: Enter the total value of all owned
+              national_savings: Enter the total value of all owned
+              other_person_account: Enter the estimated total in all accounts
+              peps_unit_trusts_capital_bonds_gov_stocks: Enter the total value of all owned
+              plc_shares: Enter the total value of all owned
+      shared_ownership_form:
+        friend_family_member_or_other_individual: Yes, a friend, family member or other individual
+        housing_assocation_or_landlord: Yes, a housing association or landlord
+        no_sole_owner: No, they're the sole owner
+        partner_or_ex_partner: Yes, a partner or ex-partner
+      success_prospect:
+          likely: 50% or better
+          marginal: 45% to 49%
+          poor: Less than 45%
+          borderline: Borderline
+          not_known: I do not know yet
+          hint:
+            marginal: The chance of a successful outcome is marginal.
+            poor: The chance of a successful outcome is poor.
+            borderline: You cannot predict the outcome.
+            not_known: Work still needs to be done to determine the likelihood of success.
+      types_of_income_form:
+        hints:
+          citizens:
+            friends_or_family: "Select if a friend or relative regularly gives you money to help with living costs. Do not include one-off payments."
+            benefits: For example, Child Benefit or tax credits.
+            maintenance_in: This includes child maintenance.
+            pension: Include State, workplace and personal pensions.
+          providers:
+            friends_or_family: For example, money from a family member for rent or bills.
+            benefits: For example, Child Benefit or tax credits.
+            maintenance_in: This includes child maintenance.
+            pension: Include State, workplace and personal pensions.
+        expanded_explanation:
+          heading: Why am I being asked this?
+          list: |
+            Your solicitor will look at your bank statements and put your transactions into the categories you select.
+            We need this information to check if you qualify financially for legal aid.
+      types_of_outgoings_form:
+        hints:
+          rent_or_mortgage: For example, rent, mortgage or board and lodging.
+          child_care: For example, to a childminder, nanny or nursery.
+          maintenance_out: This includes child maintenance.
+        expanded_explanation:
+          heading: Why am I being asked this?
+          list: |
+            Your solicitor will look at your bank statements and put your transactions into the categories you select.
+            We need this information to check if you qualify financially for legal aid.
+    page-title:
+      suffix: Apply for legal aid
+    property_results:
+      property: Property
+      value: Value
+      outstanding_mortgage: Outstanding mortgage
+      mortgage_deduction: Mortgage deduction
+      disregards: Disregards and deductions
+      assessment_amount: Amount included in calculation
+      main_home_disregard: Main home disregard
+      main_home: Main home
+      additional_property: Additional property
+    vehicle_results:
+      vehicles: Vehicles
+      value: Value
+      oustanding_payments: Outstanding payments
+      disregards: Disregards and deductions
+      assessment_amount: Amount included in calculation
+    savings_and_investments:
+      savings_and_investments: Savings and investments
+      assessed_amount: Total savings and investments
+    other_assets:
+      other_assets: Other assets
+      assessed_amount: Total assets
+    total_capital:
+      total_assessed_capital: Disposable capital
+      property: Property
+      vehicles: Vehicles
+      savings_and_investments: Savings and investments
+      other_assets: Other assets
+      disposable_capital: Total disposable capital
+      pensioner_disregard: Pensioner disregard
+      total_capital: Total
+    restrictions:
+      restrictions: Restrictions on your client's assets
+      none: None

@@ -1,0 +1,49 @@
+---
+en:
+  activerecord:
+    attributes:
+      benefit_type:
+        description: Description
+        exclude_from_gross_income: Exclude from Gross Income
+    errors:
+      models:
+        address:
+          attributes:
+            postcode:
+              invalid: is not in the right format
+        applicant:
+          attributes:
+            date_of_birth:
+              invalid: is not valid
+            email:
+              invalid: address is not in the right format
+            national_insurance_number:
+              invalid: is not in the right format
+        application_proceeding_type:
+          attributes:
+            lead_proceeding:
+              multiple: Only one application proceeding type can be nominated as lead proceeding
+        benefit_type:
+          attributes:
+            label:
+              blank: Label must be present
+              taken: The label is already used by another Benefit Type
+            description:
+              blank: Description must be present
+        feedback:
+          attributes:
+            satisfaction:
+              blank: Select how satisfied you were with the service
+            difficulty:
+              blank: Select how easy or difficult it was to apply for legal aid using the new service
+            done_all_needed:
+              inclusion: Select yes if you were you able to do what you needed today
+        legal_aid_application:
+          attributes:
+            base:
+              none_selected: Select if you receive any types of income
+
+        legal_framework/merits_task_list:
+          attributes:
+            task_list:
+              incomplete: You must complete every section before you can continue

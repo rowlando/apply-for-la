@@ -1,0 +1,35 @@
+---
+en:
+  layouts:
+    admin:
+      applications: Applications
+      edit_settings: Settings
+      submitted_applications_report: Submitted Applications
+      feedback: Feedback
+      reports: Reports
+      user_admin: User admin
+    application:
+      footer:
+        accessibility_statement: Accessibility statement
+        contact: Contact
+        cookies: Cookies
+        copyright: Crown copyright
+        digital_services_html: <abbr title='Ministry of Justice'>MOJ</abbr> Digital Services
+        feedback: Feedback
+        open_gov_link_text: Open Government Licence v3.0
+        privacy_policy: Privacy policy
+        span_text_1: All content is available under the
+        span_text_2: except where otherwise stated
+        support: Support Links
+        terms: Terms and conditions
+      header:
+        gov_uk_link_title: Go to the GOV.UK homepage
+        feedback: feedback
+        phase: beta
+        phase_banner_text_1: This is a new service – your
+        phase_banner_text_2: will help us to improve it.
+        title: Apply for legal aid
+    logout:
+      admin: Admin sign out
+      provider: Sign out
+    login: Sign In

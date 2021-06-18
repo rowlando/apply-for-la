@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <%= render partial: 'layouts/google_tag_manager' if google_tag_present? %>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title><%= html_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'styles', media: 'all' %>
+    <noscript>
+      <style>
+        .proceeding-item { display: block; }
+        #search-field { display: none; }
+      </style>
+    </noscript>
+    <%= javascript_pack_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c0c">
+
+    <%= favicon_pack_tag 'favicon.ico' %>
+    <link rel="shortcut icon" href="<%= asset_pack_path('media/images/favicon.ico') %>" type="image/x-icon">
+    <link rel="mask-icon" href="<%= asset_pack_path('media/images/govuk-mask-icon.svg') %>" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= asset_pack_path('media/images/govuk-apple-touch-icon-180x180.png') %>">
+    <link rel="apple-touch-icon" sizes="167x167" href="<%= asset_pack_path('media/images/govuk-apple-touch-icon-167x167.png') %>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= asset_pack_path('media/images/govuk-apple-touch-icon-152x152.png') %>">
+    <link rel="apple-touch-icon" href="<%= asset_pack_path('media/images/govuk-apple-touch-icon.png') %>">
+
+    <!--[if !IE 8]> <link href="/govuk-frontend/all.css" rel="stylesheet"/> <![endif]-->
+
+    <!--[if IE 8]> <link href="/govuk-frontend/all-ie8.css" rel="stylesheet" /> <![endif]-->
+
+    <!--[if lt IE 9]> <script src="/html5-shiv/html5shiv.js"></script> <![endif]-->
+
+    <meta property="og:image" content="<%= asset_pack_path('media/images/govuk-opengraph-image.png') %>">
+  </head>
+
+  <body class="govuk-template__body ">
+    <%= render partial: 'layouts/google_tag_manager_no_script' if google_tag_present? %>
+    <script nonce="<%= content_security_policy_script_nonce %>">
+      document.body.className = (
+        (document.body.className)
+          ? document.body.className + ' js-enabled'
+          : 'js-enabled'
+      );
+    </script>
+
+    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+    <%= render partial: 'layouts/header' %>
+    <div class="govuk-width-container">
+      <div class="govuk-phase-banner no-print">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag ">
+            <%= t 'layouts.application.header.phase' %>
+          </strong>
+          <span class="govuk-phase-banner__text">
+            <%= t 'layouts.application.header.phase_banner_text_1' %>
+            <%= link_to_accessible t('layouts.application.header.feedback'), new_feedback_path, class: 'govuk-link' %>
+            <%= t 'layouts.application.header.phase_banner_text_2' %>
+          </span>
+        </p>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half show-empty">
+          <%= content_for(:navigation) %>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <p class="language-switcher">
+            <!-- TODO: Remove the below if clause when the Welsh language version is released to production -->
+            <%= content_for(:language_switcher) if Setting.allow_welsh_translation? %>
+          </p>
+        </div>
+      </div>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div id="print-logo">
+          <%= image_pack_tag('crest.svg', alt: "government-crest", style: "height=58") %>
+          Legal Aid Agency
+        </div>
+        <% if flash[:error] %>
+          <div class="govuk-error-summary">
+            <h2 class="govuk-error-summary__title"><%= flash[:error] %></h2>
+          </div>
+        <% end %>
+        <% if flash[:notice] %>
+          <div class='govuk-warning-text'>
+            <span class='govuk-warning-text__icon' aria-hidden='true'>i</span>
+            <strong class='govuk-warning-text__text'>
+              <span class='govuk-warning-text__assistive'>Notice</span>
+              <%= flash[:notice] %>
+            </strong>
+          </div>
+        <% end %>
+
+        <%= yield %>
+      </main>
+    </div>
+
+    <%= render partial: 'layouts/footer' %>
+  </body>
+</html>

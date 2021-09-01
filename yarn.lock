@@ -1168,27 +1168,27 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/environment@^27.0.3":
-  version "27.0.3"
-  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-27.0.3.tgz#68769b1dfdd213e3456169d64fbe9bd63a5fda92"
-  integrity sha512-pN9m7fbKsop5vc3FOfH8NF7CKKdRbEZzcxfIo1n2TT6ucKWLFq0P6gCJH0GpnQp036++yY9utHOxpeT1WnkWTA==
+"@jest/environment@^27.0.3", "@jest/environment@^27.1.0":
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/@jest/environment/-/environment-27.1.0.tgz#c7224a67004759ec203d8fa44e8bc0db93f66c44"
+  integrity sha512-wRp50aAMY2w1U2jP1G32d6FUVBNYqmk8WaGkiIEisU48qyDV0WPtw3IBLnl7orBeggveommAkuijY+RzVnNDOQ==
   dependencies:
-    "@jest/fake-timers" "^27.0.3"
-    "@jest/types" "^27.0.2"
+    "@jest/fake-timers" "^27.1.0"
+    "@jest/types" "^27.1.0"
     "@types/node" "*"
-    jest-mock "^27.0.3"
+    jest-mock "^27.1.0"
 
-"@jest/fake-timers@^27.0.3":
-  version "27.0.3"
-  resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-27.0.3.tgz#9899ba6304cc636734c74478df502e18136461dd"
-  integrity sha512-fQ+UCKRIYKvTCEOyKPnaPnomLATIhMnHC/xPZ7yT1Uldp7yMgMxoYIFidDbpSTgB79+/U+FgfoD30c6wg3IUjA==
+"@jest/fake-timers@^27.0.3", "@jest/fake-timers@^27.1.0":
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/@jest/fake-timers/-/fake-timers-27.1.0.tgz#c0b343d8a16af17eab2cb6862e319947c0ea2abe"
+  integrity sha512-22Zyn8il8DzpS+30jJNVbTlm7vAtnfy1aYvNeOEHloMlGy1PCYLHa4PWlSws0hvNsMM5bON6GISjkLoQUV3oMA==
   dependencies:
-    "@jest/types" "^27.0.2"
+    "@jest/types" "^27.1.0"
     "@sinonjs/fake-timers" "^7.0.2"
     "@types/node" "*"
-    jest-message-util "^27.0.2"
-    jest-mock "^27.0.3"
-    jest-util "^27.0.2"
+    jest-message-util "^27.1.0"
+    jest-mock "^27.1.0"
+    jest-util "^27.1.0"
 
 "@jest/globals@^27.0.3":
   version "27.0.3"
@@ -1279,10 +1279,10 @@
     source-map "^0.6.1"
     write-file-atomic "^3.0.0"
 
-"@jest/types@^27.0.2":
-  version "27.0.2"
-  resolved "https://registry.yarnpkg.com/@jest/types/-/types-27.0.2.tgz#e153d6c46bda0f2589f0702b071f9898c7bbd37e"
-  integrity sha512-XpjCtJ/99HB4PmyJ2vgmN7vT+JLP7RW1FBT9RgnMFS4Dt7cvIyBee8O3/j98aUZ34ZpenPZFqmaaObWSeL65dg==
+"@jest/types@^27.0.2", "@jest/types@^27.1.0":
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/@jest/types/-/types-27.1.0.tgz#674a40325eab23c857ebc0689e7e191a3c5b10cc"
+  integrity sha512-pRP5cLIzN7I7Vp6mHKRSaZD7YpBTK7hawx5si8trMKqk4+WOdK8NEKOTO2G8PKWD1HbKMVckVB6/XHh/olhf2g==
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^3.0.0"
@@ -5174,17 +5174,17 @@ jest-environment-jsdom-global@^2.0.4:
   resolved "https://registry.yarnpkg.com/jest-environment-jsdom-global/-/jest-environment-jsdom-global-2.0.4.tgz#b74704487a374a67ff301fc51cfeae30fae40e8e"
   integrity sha512-1vB8q+PrszXW4Pf7Zgp3eQ4oNVbA7GY6+jmrg1qi6RtYRWDJ60/xdkhjqAbQpX8BRyvqQJYQi66LXER5YNeHXg==
 
-jest-environment-jsdom@^27.0.3:
-  version "27.0.3"
-  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-27.0.3.tgz#ed73e913ddc03864eb9f934b5cbabf1b63504e2e"
-  integrity sha512-5KLmgv1bhiimpSA8oGTnZYk6g4fsNyZiA/6gI2tAZUgrufd7heRUSVh4gRokzZVEj8zlwAQYT0Zs6tuJSW/ECA==
+jest-environment-jsdom@^27.0.3, jest-environment-jsdom@^27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-27.1.0.tgz#5fb3eb8a67e02e6cc623640388d5f90e33075f18"
+  integrity sha512-JbwOcOxh/HOtsj56ljeXQCUJr3ivnaIlM45F5NBezFLVYdT91N5UofB1ux2B1CATsQiudcHdgTaeuqGXJqjJYQ==
   dependencies:
-    "@jest/environment" "^27.0.3"
-    "@jest/fake-timers" "^27.0.3"
-    "@jest/types" "^27.0.2"
+    "@jest/environment" "^27.1.0"
+    "@jest/fake-timers" "^27.1.0"
+    "@jest/types" "^27.1.0"
     "@types/node" "*"
-    jest-mock "^27.0.3"
-    jest-util "^27.0.2"
+    jest-mock "^27.1.0"
+    jest-util "^27.1.0"
     jsdom "^16.6.0"
 
 jest-environment-node@^27.0.3:
@@ -5281,12 +5281,27 @@ jest-message-util@^27.0.2:
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
-jest-mock@^27.0.3:
-  version "27.0.3"
-  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-27.0.3.tgz#5591844f9192b3335c0dca38e8e45ed297d4d23d"
-  integrity sha512-O5FZn5XDzEp+Xg28mUz4ovVcdwBBPfAhW9+zJLO0Efn2qNbYcDaJvSlRiQ6BCZUCVOJjALicuJQI9mRFjv1o9Q==
+jest-message-util@^27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-27.1.0.tgz#e77692c84945d1d10ef00afdfd3d2c20bd8fb468"
+  integrity sha512-Eck8NFnJ5Sg36R9XguD65cf2D5+McC+NF5GIdEninoabcuoOfWrID5qJhufq5FB0DRKoiyxB61hS7MKoMD0trQ==
   dependencies:
-    "@jest/types" "^27.0.2"
+    "@babel/code-frame" "^7.12.13"
+    "@jest/types" "^27.1.0"
+    "@types/stack-utils" "^2.0.0"
+    chalk "^4.0.0"
+    graceful-fs "^4.2.4"
+    micromatch "^4.0.4"
+    pretty-format "^27.1.0"
+    slash "^3.0.0"
+    stack-utils "^2.0.3"
+
+jest-mock@^27.0.3, jest-mock@^27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-27.1.0.tgz#7ca6e4d09375c071661642d1c14c4711f3ab4b4f"
+  integrity sha512-iT3/Yhu7DwAg/0HvvLCqLvrTKTRMyJlrrfJYWzuLSf9RCAxBoIXN3HoymZxMnYsC3eD8ewGbUa9jUknwBenx2w==
+  dependencies:
+    "@jest/types" "^27.1.0"
     "@types/node" "*"
 
 jest-pnp-resolver@^1.2.2:
@@ -5421,12 +5436,12 @@ jest-snapshot@^27.0.4:
     pretty-format "^27.0.2"
     semver "^7.3.2"
 
-jest-util@^27.0.2:
-  version "27.0.2"
-  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-27.0.2.tgz#fc2c7ace3c75ae561cf1e5fdb643bf685a5be7c7"
-  integrity sha512-1d9uH3a00OFGGWSibpNYr+jojZ6AckOMCXV2Z4K3YXDnzpkAaXQyIpY14FOJPiUmil7CD+A6Qs+lnnh6ctRbIA==
+jest-util@^27.0.2, jest-util@^27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-27.1.0.tgz#06a53777a8cb7e4940ca8e20bf9c67dd65d9bd68"
+  integrity sha512-edSLD2OneYDKC6gZM1yc+wY/877s/fuJNoM1k3sOEpzFyeptSmke3SLnk1dDHk9CgTA+58mnfx3ew3J11Kes/w==
   dependencies:
-    "@jest/types" "^27.0.2"
+    "@jest/types" "^27.1.0"
     "@types/node" "*"
     chalk "^4.0.0"
     graceful-fs "^4.2.4"
@@ -7424,6 +7439,16 @@ pretty-format@^27.0.2:
   integrity sha512-mXKbbBPnYTG7Yra9qFBtqj+IXcsvxsvOBco3QHxtxTl+hHKq6QdzMZ+q0CtL4ORHZgwGImRr2XZUX2EWzORxig==
   dependencies:
     "@jest/types" "^27.0.2"
+    ansi-regex "^5.0.0"
+    ansi-styles "^5.0.0"
+    react-is "^17.0.1"
+
+pretty-format@^27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-27.1.0.tgz#022f3fdb19121e0a2612f3cff8d724431461b9ca"
+  integrity sha512-4aGaud3w3rxAO6OXmK3fwBFQ0bctIOG3/if+jYEFGNGIs0EvuidQm3bZ9mlP2/t9epLNC/12czabfy7TZNSwVA==
+  dependencies:
+    "@jest/types" "^27.1.0"
     ansi-regex "^5.0.0"
     ansi-styles "^5.0.0"
     react-is "^17.0.1"

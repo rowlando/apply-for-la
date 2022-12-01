@@ -161,7 +161,7 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.1.9)
-    connection_pool (2.2.5)
+    connection_pool (2.3.0)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -451,7 +451,7 @@ GEM
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     racc (1.5.2)
-    rack (2.2.3)
+    rack (2.2.4)
     rack-pjax (1.1.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
@@ -507,7 +507,10 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.2.5)
+    redis (5.0.5)
+      redis-client (>= 0.9.0)
+    redis-client (0.11.2)
+      connection_pool
     redis-namespace (1.8.1)
       redis (>= 3.0.4)
     regexp-examples (1.5.1)
@@ -600,10 +603,11 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
-    sidekiq (6.2.1)
-      connection_pool (>= 2.2.2)
-      rack (~> 2.0)
-      redis (>= 4.2.0)
+    sidekiq (7.0.2)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.11.0)
     sidekiq-status (1.1.4)
       chronic_duration
       sidekiq (>= 3.0)
@@ -760,7 +764,7 @@ DEPENDENCIES
   sentry-ruby
   sentry-sidekiq
   shoulda-matchers (~> 4.5)
-  sidekiq (~> 6.2.1)
+  sidekiq (~> 7.0.2)
   sidekiq-status (>= 1.1.4)
   sidekiq_alive (>= 2.0.1)
   simple_command!
